@@ -80,7 +80,7 @@
     { "keys": ["backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/LaTeXYZ/macros/Delete Left Right.sublime-macro"}, "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
-            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "setting.auto_match_enabled_delete", "operator": "equal", "operand": true },
             { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
             { "key": "preceding_text", "operator": "regex_contains", "operand": "\\($", "match_all": true },
             { "key": "following_text", "operator": "regex_contains", "operand": "^\\)", "match_all": true }
@@ -116,7 +116,7 @@
     { "keys": ["backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/LaTeXYZ/macros/Delete Left Right.sublime-macro"}, "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
-            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "setting.auto_match_enabled_delete", "operator": "equal", "operand": true },
             { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
             { "key": "preceding_text", "operator": "regex_contains", "operand": "\\[$", "match_all": true },
             { "key": "following_text", "operator": "regex_contains", "operand": "^\\]", "match_all": true }
@@ -153,7 +153,7 @@
     { "keys": ["backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/LaTeXYZ/macros/Delete Left Right.sublime-macro"}, "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
-            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "setting.auto_match_enabled_delete", "operator": "equal", "operand": true },
             { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
             { "key": "preceding_text", "operator": "regex_contains", "operand": "\\{$", "match_all": true },
             { "key": "following_text", "operator": "regex_contains", "operand": "^\\}", "match_all": true }
@@ -173,7 +173,7 @@
     { "keys": ["backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/LaTeXYZ/macros/Delete Two Left Right.sublime-macro"}, "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
-            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "setting.auto_match_enabled_delete", "operator": "equal", "operand": true },
             { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
             { "key": "preceding_text", "operator": "regex_contains", "operand": "\\\\\\($", "match_all": true },
             { "key": "following_text", "operator": "regex_contains", "operand": "^\\\\\\)", "match_all": true }
@@ -192,7 +192,7 @@
     { "keys": ["backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/LaTeXYZ/macros/Delete Two Left Right.sublime-macro"}, "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
-            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "setting.auto_match_enabled_delete", "operator": "equal", "operand": true },
             { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
             { "key": "preceding_text", "operator": "regex_contains", "operand": "\\\\\\[$", "match_all": true },
             { "key": "following_text", "operator": "regex_contains", "operand": "^\\\\\\]", "match_all": true }
@@ -229,7 +229,7 @@
     { "keys": ["backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/LaTeXYZ/macros/Delete Two Left Right.sublime-macro"}, "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
-            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "setting.auto_match_enabled_delete", "operator": "equal", "operand": true },
             { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
             { "key": "preceding_text", "operator": "regex_contains", "operand": "\\\\\\{$", "match_all": true },
             { "key": "following_text", "operator": "regex_contains", "operand": "^\\\\\\}", "match_all": true }
@@ -258,7 +258,7 @@
      { "keys": ["backspace"], "command": "run_macro_file", "args": {"file": "res://Packages/LaTeXYZ/macros/Delete Two Left Right.sublime-macro"}, "context":
          [
              { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" },
-             { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+             { "key": "setting.auto_match_enabled_delete", "operator": "equal", "operand": true },
              { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
              { "key": "preceding_text", "operator": "regex_contains", "operand": "\\\\\\|$", "match_all": true },
              { "key": "following_text", "operator": "regex_contains", "operand": "^\\\\\\|", "match_all": true }
@@ -294,7 +294,7 @@
      { "keys": ["backspace"], "command": "latexyz_insert_snippet", "args": {"contents": "", "before": 7, "after": 7}, "context":
          [
              { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" },
-             { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+             { "key": "setting.auto_match_enabled_delete", "operator": "equal", "operand": true },
              { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
              { "key": "preceding_text", "operator": "regex_contains", "operand": "\\\\langle$", "match_all": true },
              { "key": "following_text", "operator": "regex_contains", "operand": "^\\\\rangle", "match_all": true }
@@ -345,7 +345,7 @@
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
             { "key": "selector", "operator": "not_equal", "operand": "text.tex.latex source" },
-            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "setting.auto_match_enabled_delete", "operator": "equal", "operand": true },
             { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
             { "key": "preceding_text", "operator": "regex_contains", "operand": "`$", "match_all": true },
             { "key": "following_text", "operator": "regex_contains", "operand": "^'", "match_all": true }
@@ -417,7 +417,7 @@
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
             { "key": "selector", "operator": "not_equal", "operand": "text.tex.latex source" },
-            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "setting.auto_match_enabled_delete", "operator": "equal", "operand": true },
             { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
             { "key": "preceding_text", "operator": "regex_contains", "operand": "``$", "match_all": true },
             { "key": "following_text", "operator": "regex_contains", "operand": "^''", "match_all": true }
@@ -513,7 +513,7 @@
     { "keys": ["backspace"], "command": "latexyz_remove_pair", "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" },
-            { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "setting.auto_match_enabled_delete", "operator": "equal", "operand": true },
             { "key": "selection_empty", "operator": "equal", "operand": true, "match_all": true },
             { "key": "preceding_text", "operator": "regex_contains", "operand": "\\\\left(\\(|\\[|\\\\\\{|\\\\\\||\\\\langle)$", "match_all": true },
             { "key": "following_text", "operator": "regex_contains", "operand": "^\\\\right(\\)|\\]|\\\\\\}|\\\\\\||\\\\rangle)", "match_all": true }
