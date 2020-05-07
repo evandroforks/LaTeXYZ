@@ -62,10 +62,17 @@
             { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|\\]|;|\\}|\\$|\\\\|$)", "match_all": true }
         ]
     },
-    { "keys": ["("], "command": "insert_snippet", "args": {"contents": "(${0:$SELECTION})"}, "context":
+    { "keys": ["("], "command": "insert_snippet", "args": {"contents": "("}, "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
             { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+        ]
+    },
+    { "keys": ["("], "command": "insert_snippet", "args": {"contents": "(${0:$SELECTION})"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
+            { "key": "setting.auto_match_enabled_selection", "operator": "equal", "operand": true },
             { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
         ]
     },
@@ -98,10 +105,17 @@
             { "key": "lt_fill_all_cite.open_square", "operator": "not_equal", "match_all": true, "operand": true }
         ]
     },
-    { "keys": ["["], "command": "insert_snippet", "args": {"contents": "[${0:$SELECTION}]"}, "context":
+    { "keys": ["["], "command": "insert_snippet", "args": {"contents": "["}, "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
             { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+        ]
+    },
+    { "keys": ["["], "command": "insert_snippet", "args": {"contents": "[${0:$SELECTION}]"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
+            { "key": "setting.auto_match_enabled_selection", "operator": "equal", "operand": true },
             { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
         ]
     },
@@ -135,10 +149,17 @@
             { "key": "lt_fill_all_input.open_curly", "operator": "not_equal", "match_all": true, "operand": true }
         ]
     },
-    { "keys": ["{"], "command": "insert_snippet", "args": {"contents": "{${0:$SELECTION}}"}, "context":
+    { "keys": ["{"], "command": "insert_snippet", "args": {"contents": "{"}, "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
             { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+        ]
+    },
+    { "keys": ["{"], "command": "insert_snippet", "args": {"contents": "{${0:$SELECTION}}"}, "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
+            { "key": "setting.auto_match_enabled_selection", "operator": "equal", "operand": true },
             { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
         ]
     },
@@ -237,10 +258,17 @@
     },
 
     // Auto pair \{\} when selection in math mode
-    { "keys": ["{"], "command": "insert_snippet", "args": {"contents": "\\\\{${0:$SELECTION}\\\\}"}, "context":
+    { "keys": ["{"], "command": "insert_snippet", "args": {"contents": "{"}, "context":
         [
              { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" },
              { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+             { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+        ]
+    },
+    { "keys": ["{"], "command": "insert_snippet", "args": {"contents": "\\\\{${0:$SELECTION}\\\\}"}, "context":
+        [
+             { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" },
+             { "key": "setting.auto_match_enabled_selection", "operator": "equal", "operand": true },
              { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
         ]
     },
@@ -283,10 +311,17 @@
              { "key": "following_text", "operator": "regex_contains", "operand": "^(?:\t| |\\)|\\]|;|\\}|\\$|\\\\|$)", "match_all": true }
          ]
      },
-     { "keys": ["<"], "command": "insert_snippet", "args": {"contents": "\\langle ${0:$SELECTION}\\rangle"}, "context":
+     { "keys": ["<"], "command": "insert_snippet", "args": {"contents": "<"}, "context":
          [
              { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" },
              { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+             { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+         ]
+     },
+     { "keys": ["<"], "command": "insert_snippet", "args": {"contents": "\\langle ${0:$SELECTION}\\rangle"}, "context":
+         [
+             { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" },
+             { "key": "setting.auto_match_enabled_selection", "operator": "equal", "operand": true },
              { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
          ]
      },
@@ -317,12 +352,23 @@
     },
     {
         "keys": ["'"],
-        "command": "insert_snippet", "args": { "contents": "`${0:$SELECTION}'" },
+        "command": "insert_snippet", "args": { "contents": "`" },
         "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
             { "key": "selector", "operator": "not_equal", "operand": "text.tex.latex source" },
             { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
+        ]
+    },
+    {
+        "keys": ["'"],
+        "command": "insert_snippet", "args": { "contents": "`${0:$SELECTION}'" },
+        "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
+            { "key": "selector", "operator": "not_equal", "operand": "text.tex.latex source" },
+            { "key": "setting.auto_match_enabled_selection", "operator": "equal", "operand": true },
             { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
         ]
     },
@@ -391,12 +437,23 @@
     },
     {
         "keys": ["\""],
-        "command": "insert_snippet", "args": { "contents": "``${0:$SELECTION}''" },
+        "command": "insert_snippet", "args": { "contents": "``" },
         "context":
         [
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
             { "key": "selector", "operator": "not_equal", "operand": "text.tex.latex source" },
             { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+        ]
+    },
+    {
+        "keys": ["\""],
+        "command": "insert_snippet", "args": { "contents": "``${0:$SELECTION}''" },
+        "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" },
+            { "key": "selector", "operator": "not_equal", "operand": "text.tex.latex source" },
+            { "key": "setting.auto_match_enabled_selection", "operator": "equal", "operand": true },
             { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
         ]
     },
@@ -546,16 +603,31 @@
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
         ]
     },
-    { "keys": ["^"], "command": "insert_snippet", "args": {"contents": "\\hat{${0:$SELECTION}}"}, "context":
+    { "keys": ["^"], "command": "insert_snippet", "args": {"contents": "^"}, "context":
         [
             { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" },
             { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
         ]
     },
-    { "keys": ["^"], "command": "latexyz_insert_snippet", "args": {"contents": "\\widehat{${0:$SELECTION}}", "before": 5, "after": 1}, "context":
+    { "keys": ["^"], "command": "insert_snippet", "args": {"contents": "\\hat{${0:$SELECTION}}"}, "context":
+        [
+            { "key": "setting.auto_match_enabled_selection", "operator": "equal", "operand": true },
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+        ]
+    },
+    { "keys": ["^"], "command": "insert_snippet", "args": {"contents": "^"}, "context":
         [
             { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
+            { "key": "latexyz.surrounded_by", "operator": "equal", "operand": ["\\hat{", "}"]}
+        ]
+    },
+    { "keys": ["^"], "command": "latexyz_insert_snippet", "args": {"contents": "\\widehat{${0:$SELECTION}}", "before": 5, "after": 1}, "context":
+        [
+            { "key": "setting.auto_match_enabled_selection", "operator": "equal", "operand": true },
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" },
             { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
             { "key": "latexyz.surrounded_by", "operator": "equal", "operand": ["\\hat{", "}"]}
@@ -566,16 +638,31 @@
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
         ]
     },
-    { "keys": ["_"], "command": "insert_snippet", "args": {"contents": "\\bar{${0:$SELECTION}}"}, "context":
+    { "keys": ["_"], "command": "insert_snippet", "args": {"contents": "_"}, "context":
         [
             { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" },
             { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
         ]
     },
-    { "keys": ["_"], "command": "latexyz_insert_snippet", "args": {"contents": "\\overline{${0:$SELECTION}}", "before": 5, "after": 1}, "context":
+    { "keys": ["_"], "command": "insert_snippet", "args": {"contents": "\\bar{${0:$SELECTION}}"}, "context":
+        [
+            { "key": "setting.auto_match_enabled_selection", "operator": "equal", "operand": true },
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true }
+        ]
+    },
+    { "keys": ["_"], "command": "insert_snippet", "args": {"contents": "_"}, "context":
         [
             { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
+            { "key": "latexyz.surrounded_by", "operator": "equal", "operand": ["\\bar{", "}"]}
+        ]
+    },
+    { "keys": ["_"], "command": "latexyz_insert_snippet", "args": {"contents": "\\overline{${0:$SELECTION}}", "before": 5, "after": 1}, "context":
+        [
+            { "key": "setting.auto_match_enabled_selection", "operator": "equal", "operand": true },
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" },
             { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
             { "key": "latexyz.surrounded_by", "operator": "equal", "operand": ["\\bar{", "}"]}
@@ -586,9 +673,16 @@
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" }
         ]
     },
-    { "keys": ["/"], "command": "insert_snippet", "args": {"contents": "\\frac{${1:$SELECTION}}{$0}"}, "context":
+    { "keys": ["/"], "command": "insert_snippet", "args": {"contents": "/"}, "context":
         [
             { "key": "setting.auto_match_enabled", "operator": "equal", "operand": true },
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" },
+            { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
+        ]
+    },
+    { "keys": ["/"], "command": "insert_snippet", "args": {"contents": "\\frac{${1:$SELECTION}}{$0}"}, "context":
+        [
+            { "key": "setting.auto_match_enabled_selection", "operator": "equal", "operand": true },
             { "key": "selector", "operator": "equal", "operand": "text.tex.latex meta.environment.math" },
             { "key": "selection_empty", "operator": "equal", "operand": false, "match_all": true },
         ]
